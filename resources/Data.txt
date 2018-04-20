@@ -1,0 +1,9 @@
+2 Edwina 21 F 8350
+3 Isaac 20 M 5000
+4 Drake 50 F 6890
+5 Artyum 38 M 8354
+7 Vincent 19 M 5000
+8 Tracy 19 F 8675
+9 Icy 20 F 6770
+10 Khan 7 F 7000
+1 jack 32 M 3000

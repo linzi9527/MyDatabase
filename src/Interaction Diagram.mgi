@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <CommunicationClass name="database.isaac.Input" x="716" y="93"/>
+    <CommunicationClass name="database.isaac.QueryFile" x="665" y="455">
+        <Extension destinationClassName="database.isaac.UsefulMethod"/>
+        <Communication destinationClassName="database.isaac.UsefulMethod">
+            <Point x="856" y="412"/>
+            <Point x="860" y="350"/>
+        </Communication>
+    </CommunicationClass>
+    <CommunicationClass name="database.isaac.CheckCmd" x="483" y="194">
+        <Extension destinationClassName="database.isaac.UsefulMethod"/>
+        <Association destinationClassName="database.isaac.UserInterface"
+            endpointName="ui" kind="Simple"/>
+        <Association destinationClassName="database.isaac.Action"
+            endpointName="action" kind="Simple"/>
+        <Communication destinationClassName="database.isaac.UsefulMethod">
+            <Point x="580" y="172"/>
+            <Point x="830" y="171"/>
+        </Communication>
+        <Communication destinationClassName="database.isaac.Action"/>
+        <Communication destinationClassName="database.isaac.UserInterface">
+            <Point x="464" y="215"/>
+            <Point x="468" y="148"/>
+            <Point x="330" y="148"/>
+        </Communication>
+    </CommunicationClass>
+    <CommunicationClass name="database.isaac.User" x="397" y="253"/>
+    <CommunicationClass name="database.isaac.UsefulMethod" x="770" y="193">
+        <Association destinationClassName="database.isaac.QueryFile"
+            endpointName="queryFile" kind="Simple"/>
+        <Association destinationClassName="database.isaac.WriteFile"
+            endpointName="writeFile" kind="Simple"/>
+        <Communication destinationClassName="database.isaac.QueryFile">
+            <Point x="931" y="213"/>
+            <Point x="931" y="472"/>
+        </Communication>
+        <Communication destinationClassName="database.isaac.WriteFile">
+            <Point x="802" y="343"/>
+        </Communication>
+    </CommunicationClass>
+    <CommunicationClass name="database.isaac.Action" x="504" y="332">
+        <Extension destinationClassName="database.isaac.UsefulMethod"/>
+        <Association destinationClassName="database.isaac.QueryFile"
+            endpointName="queryFile" kind="Simple"/>
+        <Association destinationClassName="database.isaac.UserInterface"
+            endpointName="ui" kind="Simple"/>
+        <Association destinationClassName="database.isaac.User"
+            endpointName="user" kind="Simple"/>
+        <Association destinationClassName="database.isaac.WriteFile"
+            endpointName="writeFile" kind="Simple"/>
+        <Communication destinationClassName="database.isaac.QueryFile"/>
+        <Communication destinationClassName="database.isaac.User"/>
+        <Communication destinationClassName="database.isaac.UsefulMethod">
+            <Point x="628" y="322"/>
+            <Point x="665" y="216"/>
+        </Communication>
+        <Communication destinationClassName="database.isaac.UserInterface">
+            <Point x="132" y="356"/>
+            <Point x="135" y="207"/>
+        </Communication>
+        <Communication destinationClassName="database.isaac.WriteFile"/>
+    </CommunicationClass>
+    <CommunicationClass name="database.isaac.MainLooper" x="488" y="97">
+        <Association destinationClassName="database.isaac.Input"
+            endpointName="ip" kind="Simple"/>
+        <Association destinationClassName="database.isaac.CheckCmd"
+            endpointName="checkCmd" kind="Simple"/>
+        <Communication destinationClassName="database.isaac.Input"/>
+        <Communication destinationClassName="database.isaac.CheckCmd"/>
+    </CommunicationClass>
+    <CommunicationClass name="database.isaac.UserInterface" x="159" y="134">
+        <Association destinationClassName="database.isaac.IOProproties"
+            endpointName="io" kind="Simple"/>
+        <Communication destinationClassName="database.isaac.IOProproties"/>
+    </CommunicationClass>
+    <CommunicationClass name="database.isaac.Main" x="510" y="1">
+        <Communication destinationClassName="database.isaac.MainLooper"/>
+        <Communication destinationClassName="database.isaac.UserInterface">
+            <Point x="222" y="27"/>
+        </Communication>
+    </CommunicationClass>
+    <CommunicationClass name="database.isaac.IOProproties" x="12" y="136"/>
+    <CommunicationClass name="database.isaac.WriteFile" x="669" y="324"/>
+</ClassDiagram>

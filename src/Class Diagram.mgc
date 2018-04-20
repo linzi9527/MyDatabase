@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="database.isaac.Input" x="762" y="80">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="database.isaac.QueryFile" x="78" y="186">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="database.isaac.UsefulMethod">
+            <Point x="161" y="111"/>
+        </Extension>
+        <Communication destinationClassName="database.isaac.UsefulMethod"/>
+    </Class>
+    <Class name="database.isaac.CheckCmd" x="427" y="81">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="database.isaac.UsefulMethod"/>
+        <Association destinationClassName="database.isaac.UserInterface"
+            endpointName="ui" kind="Simple"/>
+        <Association destinationClassName="database.isaac.Action"
+            endpointName="action" kind="Simple"/>
+        <Communication destinationClassName="database.isaac.UsefulMethod"/>
+        <Communication destinationClassName="database.isaac.Action"/>
+        <Communication destinationClassName="database.isaac.UserInterface"/>
+    </Class>
+    <Class name="database.isaac.User" x="408" y="383">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="database.isaac.UsefulMethod" x="168" y="29">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="database.isaac.QueryFile"
+            endpointName="queryFile" kind="Simple">
+            <Point x="184" y="121"/>
+        </Association>
+        <Association destinationClassName="database.isaac.WriteFile"
+            endpointName="writeFile" kind="Simple">
+            <Point x="64" y="124"/>
+            <Point x="56" y="442"/>
+        </Association>
+        <Communication destinationClassName="database.isaac.QueryFile"/>
+        <Communication destinationClassName="database.isaac.WriteFile"/>
+    </Class>
+    <Class name="database.isaac.Action" x="375" y="201">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="database.isaac.UsefulMethod"/>
+        <Association destinationClassName="database.isaac.QueryFile"
+            endpointName="queryFile" kind="Simple"/>
+        <Association destinationClassName="database.isaac.UserInterface"
+            endpointName="ui" kind="Simple"/>
+        <Association destinationClassName="database.isaac.User"
+            endpointName="user" kind="Simple"/>
+        <Association destinationClassName="database.isaac.WriteFile"
+            endpointName="writeFile" kind="Simple"/>
+        <Communication destinationClassName="database.isaac.QueryFile"/>
+        <Communication destinationClassName="database.isaac.User"/>
+        <Communication destinationClassName="database.isaac.UsefulMethod"/>
+        <Communication destinationClassName="database.isaac.UserInterface"/>
+        <Communication destinationClassName="database.isaac.WriteFile"/>
+    </Class>
+    <Class name="database.isaac.MainLooper" x="634" y="71">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="database.isaac.Input"
+            endpointName="ip" kind="Simple"/>
+        <Association destinationClassName="database.isaac.CheckCmd"
+            endpointName="checkCmd" kind="Simple"/>
+        <Communication destinationClassName="database.isaac.Input"/>
+        <Communication destinationClassName="database.isaac.CheckCmd"/>
+    </Class>
+    <Class name="database.isaac.UserInterface" x="705" y="169">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="database.isaac.IOProproties"
+            endpointName="io" kind="Simple"/>
+        <Communication destinationClassName="database.isaac.IOProproties"/>
+    </Class>
+    <Class name="database.isaac.Main" x="651" y="12">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="database.isaac.MainLooper"/>
+        <Communication destinationClassName="database.isaac.UserInterface"/>
+    </Class>
+    <Class name="database.isaac.IOProproties" x="759" y="511">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="database.isaac.WriteFile" x="92" y="403">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+</ClassDiagram>
